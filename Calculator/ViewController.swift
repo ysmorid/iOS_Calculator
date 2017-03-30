@@ -10,19 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var display: UILabel?
+    @IBOutlet weak var display: UILabel!
     
     var userIsCurrentlyTyping = false
+    
+    var displayValue: Double {
+        get {
+            return Double(display.text!)!
+        }
+        set {
+            display.text = String(newValue)
+        }
+    }
     
     @IBAction func touchDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
         
         if userIsCurrentlyTyping {
-            let textCurrentlyInDisplay = display!.text!
-            display!.text = textCurrentlyInDisplay + digit
+            let textCurrentlyInDisplay = display.text!
+            display.text = textCurrentlyInDisplay + digit
         }
         else {
-            display!.text = digit
+            display.text = digit
             userIsCurrentlyTyping = true;
         }
         
@@ -34,7 +43,9 @@ class ViewController: UIViewController {
         if let mathSymbol = sender.currentTitle {
             switch mathSymbol {
             case "π":
-                display!.text = String(Double.pi)
+                displayValue = Double.pi
+            case "√":
+                displayValue = sqrt(displayValue)
             default:
                 break
             }
