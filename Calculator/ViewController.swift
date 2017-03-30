@@ -9,15 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var display: UILabel?
+    
+    var userIsCurrentlyTyping = false
 
     @IBAction func touchDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
-        let textCurrentlyInDisplay = display!.text!
         
+        if userIsCurrentlyTyping {
+        let textCurrentlyInDisplay = display!.text!
         display!.text = textCurrentlyInDisplay + digit
+        }
+        else {
+            display!.text = digit
+            userIsCurrentlyTyping = true;
+        }
+        
     }
-    
-    @IBOutlet weak var display: UILabel?
 
 }
 
