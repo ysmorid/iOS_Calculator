@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         if let mathSymbol = sender.currentTitle {
             switch mathSymbol {
             case "π":
-                display!.text = "3.14159"
+                display!.text = String(Double.pi)
             default:
                 break
             }
