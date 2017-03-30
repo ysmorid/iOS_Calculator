@@ -11,9 +11,13 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBAction func touchDigit(_ sender: UIButton) {
-        let digit = sender.currentTitle
-        print("\(String(describing: digit)) was pressed.")
+        let digit = sender.currentTitle!
+        let textCurrentlyInDisplay = display!.text!
+        
+        display!.text = textCurrentlyInDisplay + digit
     }
+    
+    @IBOutlet weak var display: UILabel?
 
 }
 
