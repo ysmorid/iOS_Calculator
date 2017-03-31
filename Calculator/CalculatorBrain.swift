@@ -18,9 +18,14 @@ struct CalculatorBrain {
     
     private var operations: Dictionary<String, Operation> = [
         "π": Operation.constant(Double.pi),
-        "√": Operation.unaryOperation(sqrt)
+        "e": Operation.constant(M_E),
+        "√": Operation.unaryOperation(sqrt),
+        "sin": Operation.unaryOperation(sin),
+        "cos": Operation.unaryOperation(cos),
+        "tan": Operation.unaryOperation(tan),
+        "±": Operation.unaryOperation(changeSign),
         
-    ]
+        ]
     
     var result: Double? {
         get {
@@ -44,4 +49,10 @@ struct CalculatorBrain {
     mutating func setOperand(_ operand: Double) {
         accumulator = operand
     }
+    
+    
+}
+
+func changeSign(operand: Double) -> Double {
+    return -operand
 }
