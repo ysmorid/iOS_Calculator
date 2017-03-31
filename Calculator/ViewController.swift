@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var display: UILabel!
     
     var userIsCurrentlyTyping = false
+    private var brain: CalculatorBrain = CalculatorBrain()
     
     var displayValue: Double {
         get {
@@ -38,17 +39,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func performOperation(_ sender: UIButton) {
-        userIsCurrentlyTyping = false
+        if userIsCurrentlyTyping {
+            brain.setOperand(displayValue)
+            userIsCurrentlyTyping = false
+        }
         
         if let mathSymbol = sender.currentTitle {
-            switch mathSymbol {
-            case "π":
-                displayValue = Double.pi
-            case "√":
-                displayValue = sqrt(displayValue)
-            default:
-                break
-            }
+            brain.performOperation(mathSymbol)
+        }
+        if let result = brain.result {
+            displayValue = result
         }
     }
 }
