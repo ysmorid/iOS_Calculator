@@ -29,11 +29,12 @@ struct CalculatorBrain {
         "sin": Operation.unaryOperation(sin),
         "cos": Operation.unaryOperation(cos),
         "tan": Operation.unaryOperation(tan),
-        "±": Operation.unaryOperation(changeSign),
-        "+": Operation.binaryOperation(add),
-        "-": Operation.binaryOperation(subtract),
-        "x": Operation.binaryOperation(multiply),
-        "/": Operation.binaryOperation(divide),
+        "±": Operation.unaryOperation({-$0}),
+        "x²": Operation.unaryOperation({$0 * $0}),
+        "+": Operation.binaryOperation({$0 + $1}),
+        "-": Operation.binaryOperation({$0 - $1}),
+        "x": Operation.binaryOperation({$0 * $1}),
+        "/": Operation.binaryOperation({$0 / $1}),
         "=": Operation.equals
     ]
     
@@ -82,26 +83,4 @@ struct CalculatorBrain {
             pendingBinaryOperation = nil
         }
     }
-    
-    
-}
-
-func changeSign(operand: Double) -> Double {
-    return -operand
-}
-
-func add(num1: Double, num2: Double) -> Double {
-    return num1 + num2
-}
-
-func subtract(num1: Double, num2: Double) -> Double {
-    return num1 - num2
-}
-
-func multiply(num1: Double, num2: Double) -> Double {
-    return num1 * num2
-}
-
-func divide(num1: Double, num2: Double) -> Double {
-    return num1 / num2
 }
