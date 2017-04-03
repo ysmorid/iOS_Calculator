@@ -31,12 +31,13 @@ struct CalculatorBrain {
         "tan": Operation.unaryOperation(tan),
         "±": Operation.unaryOperation({-$0}),
         "x²": Operation.unaryOperation({$0 * $0}),
+        "C": Operation.unaryOperation({$0 * 0}),
         "+": Operation.binaryOperation({$0 + $1}),
         "-": Operation.binaryOperation({$0 - $1}),
         "x": Operation.binaryOperation({$0 * $1}),
         "/": Operation.binaryOperation({$0 / $1}),
-        "=": Operation.equals
-    ]
+        "=": Operation.equals,
+        ]
     
     var result: Double? {
         get {
