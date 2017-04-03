@@ -28,8 +28,11 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qYi-ux-AoR">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="65"/>
                                         <color key="backgroundColor" red="0.0054413769394159317" green="0.10038062185049057" blue="0.57610303163528442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                        <color key="textColor" red="0.840798020362854" green="0.88021993637084961" blue="0.94518107175827026" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.83921568627450982" green="0.8784313725490196" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="0.0054413769394159317" green="0.10038062185049057" blue="0.57610303163528442" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
@@ -44,7 +47,10 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oya-8k-shc">
                                                         <rect key="frame" x="0.0" y="0.0" width="166.5" height="71.5"/>
-                                                        <color key="backgroundColor" red="0.9994240403175354" green="0.79696032475000977" blue="0.11875035864778177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.9994240403175354" green="0.80492923579876174" blue="0.39248294658472427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="C">
                                                             <color key="titleColor" red="0.0" green="0.23464992639999999" blue="0.41667926309999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,7 +61,10 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDm-py-OI7">
                                                         <rect key="frame" x="176.5" y="0.0" width="166.5" height="71.5"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.83571094274520874" green="0.88974791765213013" blue="0.90743833780288696" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -72,17 +81,26 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsT-1x-wBq">
                                                         <rect key="frame" x="0.0" y="0.0" width="78.5" height="72"/>
                                                         <color key="backgroundColor" red="0.46500998735427856" green="0.83762544393539429" blue="0.99940603971481323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="+">
                                                             <color key="titleColor" red="0.0" green="0.23464992642402649" blue="0.4166792631149292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <color key="backgroundColor" red="0.46500998735427856" green="0.83762544393539429" blue="0.99940603971481323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QbI-cs-AhI"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWZ-cY-Jct">
                                                         <rect key="frame" x="88.5" y="0.0" width="78" height="72"/>
-                                                        <color key="backgroundColor" red="0.84049117569999998" green="0.88430356980000002" blue="0.94499891999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.65490196078431373" green="0.78431372549019607" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="9">
                                                             <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -93,7 +111,10 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofa-eT-A6z">
                                                         <rect key="frame" x="176.5" y="0.0" width="78.5" height="72"/>
-                                                        <color key="backgroundColor" red="0.84049117569999998" green="0.88430356980000002" blue="0.94499891999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.65490196078431373" green="0.78431372549019607" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="7">
                                                             <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -104,7 +125,10 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9z6-M0-aei">
                                                         <rect key="frame" x="265" y="0.0" width="78" height="72"/>
-                                                        <color key="backgroundColor" red="0.84049117565155029" green="0.88430356979370117" blue="0.94499891996383667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.65490196078431373" green="0.78431372549019607" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="8">
                                                             <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -121,6 +145,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5TJ-f8-ok6">
                                                         <rect key="frame" x="0.0" y="0.0" width="78.5" height="71.5"/>
                                                         <color key="backgroundColor" red="0.46500998735427856" green="0.83762544393539429" blue="0.99940603971481323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="-">
                                                             <color key="titleColor" red="0.0" green="0.23464992642402649" blue="0.4166792631149292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -131,7 +158,10 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7K-3b-Agd">
                                                         <rect key="frame" x="88.5" y="0.0" width="78" height="71.5"/>
-                                                        <color key="backgroundColor" red="0.84049117569999998" green="0.88430356980000002" blue="0.94499891999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.65630233770000002" green="0.78393064359999998" blue="0.94499891999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="4">
                                                             <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -142,7 +172,10 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsH-Su-U0d">
                                                         <rect key="frame" x="176.5" y="0.0" width="78.5" height="71.5"/>
-                                                        <color key="backgroundColor" red="0.84049117569999998" green="0.88430356980000002" blue="0.94499891999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.65630233770000002" green="0.78393064359999998" blue="0.94499891999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="5">
                                                             <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -153,7 +186,10 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cR-Rq-icf">
                                                         <rect key="frame" x="265" y="0.0" width="78" height="71.5"/>
-                                                        <color key="backgroundColor" red="0.84049117569999998" green="0.88430356980000002" blue="0.94499891999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.65630233770000002" green="0.78393064359999998" blue="0.94499891999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="6">
                                                             <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -170,6 +206,10 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drf-f5-Hla">
                                                         <rect key="frame" x="0.0" y="0.0" width="78.5" height="72"/>
                                                         <color key="backgroundColor" red="0.46500998735427856" green="0.83762544393539429" blue="0.99940603971481323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="x">
                                                             <color key="titleColor" red="0.0" green="0.23464992642402649" blue="0.4166792631149292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -180,7 +220,11 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlj-FE-yub">
                                                         <rect key="frame" x="88.5" y="0.0" width="78" height="72"/>
-                                                        <color key="backgroundColor" red="0.84049117569999998" green="0.88430356980000002" blue="0.94499891999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.65490196078431373" green="0.78431372549019607" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="1">
                                                             <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -191,7 +235,11 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwz-ar-TQI">
                                                         <rect key="frame" x="176.5" y="0.0" width="78.5" height="72"/>
-                                                        <color key="backgroundColor" red="0.84049117569999998" green="0.88430356980000002" blue="0.94499891999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.65490196078431373" green="0.78431372549019607" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="2">
                                                             <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -202,7 +250,11 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyx-u9-KWz">
                                                         <rect key="frame" x="265" y="0.0" width="78" height="72"/>
-                                                        <color key="backgroundColor" red="0.84049117569999998" green="0.88430356980000002" blue="0.94499891999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.65490196078431373" green="0.78431372549019607" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="3">
                                                             <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -219,6 +271,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Np-he-wHc">
                                                         <rect key="frame" x="0.0" y="0.0" width="78.5" height="71.5"/>
                                                         <color key="backgroundColor" red="0.46500998735427856" green="0.83762544393539429" blue="0.99940603971481323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="/">
                                                             <color key="titleColor" red="0.0" green="0.23464992642402649" blue="0.4166792631149292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -230,6 +285,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnC-Ci-QTh">
                                                         <rect key="frame" x="88.5" y="0.0" width="78" height="71.5"/>
                                                         <color key="backgroundColor" red="0.46500998735427856" green="0.83762544393539429" blue="0.99940603971481323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title=".">
                                                             <color key="titleColor" red="0.0024073009844869375" green="0.1895725429058075" blue="0.3325839638710022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -240,7 +298,10 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3t-cW-EqM">
                                                         <rect key="frame" x="176.5" y="0.0" width="78.5" height="71.5"/>
-                                                        <color key="backgroundColor" red="0.84049117569999998" green="0.88430356980000002" blue="0.94499891999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.65490196078431373" green="0.78431372549019607" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="0">
                                                             <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -252,6 +313,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLh-l0-nS1">
                                                         <rect key="frame" x="265" y="0.0" width="78" height="71.5"/>
                                                         <color key="backgroundColor" red="0.46500998735427856" green="0.83762544393539429" blue="0.99940603971481323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="=">
                                                             <color key="titleColor" red="0.0" green="0.23464992642402649" blue="0.4166792631149292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -268,6 +332,10 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWm-im-I8W">
                                                         <rect key="frame" x="0.0" y="0.0" width="78.5" height="72"/>
                                                         <color key="backgroundColor" red="0.0" green="0.23509306260183385" blue="0.41566064908419764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="π">
                                                             <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -279,6 +347,10 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYZ-ua-0is">
                                                         <rect key="frame" x="88.5" y="0.0" width="78" height="72"/>
                                                         <color key="backgroundColor" red="0.0" green="0.23509306260183385" blue="0.41566064908419764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="√">
                                                             <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -290,6 +362,10 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pM6-RW-bbj">
                                                         <rect key="frame" x="176.5" y="0.0" width="78.5" height="72"/>
                                                         <color key="backgroundColor" red="0.0" green="0.23509306260183385" blue="0.41566064908419764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="x²">
                                                             <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -301,6 +377,10 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUl-F3-CJE">
                                                         <rect key="frame" x="265" y="0.0" width="78" height="72"/>
                                                         <color key="backgroundColor" red="0.0" green="0.23509306260183385" blue="0.41566064908419764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="±">
                                                             <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -317,6 +397,10 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYK-8Q-peV">
                                                         <rect key="frame" x="0.0" y="0.0" width="78.5" height="71.5"/>
                                                         <color key="backgroundColor" red="0.0" green="0.23509306260000001" blue="0.4156606491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="sin">
                                                             <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -328,6 +412,10 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvG-4v-im2">
                                                         <rect key="frame" x="88.5" y="0.0" width="78" height="71.5"/>
                                                         <color key="backgroundColor" red="0.0" green="0.23509306260183385" blue="0.41566064908419764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="cos">
                                                             <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -339,6 +427,10 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gA8-Vp-SNL">
                                                         <rect key="frame" x="176.5" y="0.0" width="78.5" height="71.5"/>
                                                         <color key="backgroundColor" red="0.0" green="0.23509306260183385" blue="0.41566064908419764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="tan">
                                                             <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -350,6 +442,10 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqW-oz-YLs">
                                                         <rect key="frame" x="265" y="0.0" width="78" height="71.5"/>
                                                         <color key="backgroundColor" red="0.0" green="0.23509306260000001" blue="0.4156606491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="e">
                                                             <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -365,7 +461,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.83421817213238381" green="0.89055519840624608" blue="0.90496113578680204" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                         <constraints>
                             <constraint firstItem="n5M-dO-RnH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="QPL-wL-CYz"/>
