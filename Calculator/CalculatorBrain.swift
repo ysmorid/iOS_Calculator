@@ -1,19 +1,11 @@
-
-
-//
-//  CalculatorBrain.swift
-//  Calculator
-//
-//  Created by Ylia Moridzadeh on 3/31/17.
-//  Copyright © 2017 Ylia Moridzadeh. All rights reserved.
-//
-
 import Foundation
 
 struct CalculatorBrain {
     
     private var accumulator: Double?
     private var pendingBinaryOperation: PendingBinaryOperation?
+    private var description: String = ""
+    private var isPartialResult: Bool = true
     
     private enum Operation {
         case constant (Double)
@@ -47,9 +39,13 @@ struct CalculatorBrain {
     
     mutating func setOperand(_ operand: Double) {
         accumulator = operand
+        description += String(operand)
     }
     
     mutating func performOperation(_ symbol: String) {
+        
+        description += symbol
+        
         if let operation = operations[symbol] {
             switch operation {
             case .constant(let value):
@@ -65,8 +61,10 @@ struct CalculatorBrain {
                 }
             case .equals:
                 performPendingBinaryOperation()
+                isPartialResult = false
             }
         }
+        
     }
     
     private struct PendingBinaryOperation {
@@ -83,5 +81,9 @@ struct CalculatorBrain {
             accumulator = pendingBinaryOperation!.perform(with: accumulator!)
             pendingBinaryOperation = nil
         }
+    }
+    
+    mutating func displayDescription() -> String{
+        return description
     }
 }

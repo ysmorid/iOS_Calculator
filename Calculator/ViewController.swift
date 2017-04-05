@@ -1,16 +1,9 @@
-//
-//  ViewController.swift
-//  Calculator
-//
-//  Created by Ylia Moridzadeh on 3/30/17.
-//  Copyright © 2017 Ylia Moridzadeh. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var display: UILabel!
+    @IBOutlet weak var calculatorDescription: UILabel!
     
     var userIsCurrentlyTyping = false
     private var brain: CalculatorBrain = CalculatorBrain()
@@ -24,6 +17,15 @@ class ViewController: UIViewController {
         }
     }
     
+//    var descriptionValue: Double {
+//        get {
+//            return Double(calculatorDescription.text!)!
+//        }
+//        set {
+//            calculatorDescription.text = String(newValue)
+//        }
+//    }
+    
     @IBAction func touchDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
         
@@ -31,6 +33,7 @@ class ViewController: UIViewController {
             let textCurrentlyInDisplay = display.text!
             if (textCurrentlyInDisplay.contains(".") && digit == ".") {
                 display.text = textCurrentlyInDisplay
+
             }
             else {
                 display.text = textCurrentlyInDisplay + digit
@@ -51,9 +54,11 @@ class ViewController: UIViewController {
         
         if let mathSymbol = sender.currentTitle {
             brain.performOperation(mathSymbol)
+            calculatorDescription.text = brain.displayDescription()
         }
+        
         if let result = brain.result {
-            displayValue = result
+                        displayValue = result
         }
     }
 }
