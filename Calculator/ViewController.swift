@@ -5,6 +5,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var display: UILabel!
     @IBOutlet weak var calculatorDescription: UILabel!
     
+    @IBAction func save() {
+        savedProgram = brain.program
+    }
+    @IBAction func restore() {
+        if savedProgram != nil {
+            brain.program = savedProgram!
+            displayValue = brain.result!
+        }
+    }
+    
+    var savedProgram: CalculatorBrain.PropertyList?
+    
     var userIsCurrentlyTyping = false
     private var brain: CalculatorBrain = CalculatorBrain()
     

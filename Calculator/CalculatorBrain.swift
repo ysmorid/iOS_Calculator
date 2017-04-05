@@ -6,6 +6,27 @@ struct CalculatorBrain {
     private var pendingBinaryOperation: PendingBinaryOperation?
     private var description: String = " "
     private var isPartialResult: Bool = true
+    private var internalProgram = [AnyObject]()
+    
+    typealias PropertyList = AnyObject
+    var program: PropertyList {
+        get {
+            return internalProgram as CalculatorBrain.PropertyList
+        }
+        set {
+            clear()
+            if let arrayOfOperations = newValue as? [AnyObject] {
+                for operation in arrayOfOperations {
+                    if let operand = operation as? Double {
+                        setOperand(operand)
+                    }
+                    else if let symbol = operation as? String {
+                        performOperation(symbol)
+                    }
+                }
+            }
+        }
+    }
     
     private enum Operation {
         case constant (Double)
@@ -41,10 +62,12 @@ struct CalculatorBrain {
     mutating func setOperand(_ operand: Double) {
         accumulator = operand
         description += String(operand)
+        internalProgram.append(operand as AnyObject)
     }
     
     mutating func performOperation(_ symbol: String) {
         isPartialResult = true
+        internalProgram.append(symbol as AnyObject)
         if symbol != "=" {
             description += symbol
         }
@@ -104,5 +127,6 @@ struct CalculatorBrain {
     private mutating func clear() {
         accumulator = 0.0
         description = " "
+        internalProgram.removeAll()
     }
 }

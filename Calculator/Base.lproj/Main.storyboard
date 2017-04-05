@@ -59,31 +59,45 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="66.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oya-8k-shc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="166.5" height="66.5"/>
-                                                        <color key="backgroundColor" red="0.9994240403175354" green="0.80492923579876174" blue="0.39248294658472427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="66.5"/>
+                                                        <color key="backgroundColor" red="1" green="0.80392156862745101" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                                         </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                         <state key="normal" title="C">
-                                                            <color key="titleColor" red="0.0" green="0.23464992639999999" blue="0.41667926309999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u7P-9y-KkU"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDm-py-OI7">
-                                                        <rect key="frame" x="176.5" y="0.0" width="166.5" height="66.5"/>
-                                                        <color key="backgroundColor" red="0.83571094274520874" green="0.88974791765213013" blue="0.90743833780288696" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <rect key="frame" x="117.5" y="0.0" width="108" height="66.5"/>
+                                                        <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                                         </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
-                                                        <state key="normal">
-                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="SAVE">
+                                                            <color key="titleColor" red="1" green="0.80392156862745101" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s4o-W3-lCK"/>
+                                                            <action selector="save" destination="BYZ-38-t0r" eventType="touchUpInside" id="sSU-TM-rDx"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7RR-xh-IyK">
+                                                        <rect key="frame" x="235.5" y="0.0" width="107.5" height="66.5"/>
+                                                        <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                        </accessibility>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                        <state key="normal" title="RESTORE">
+                                                            <color key="titleColor" red="1" green="0.80392156862745101" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="restore" destination="BYZ-38-t0r" eventType="touchUpInside" id="RE9-FI-ESD"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -344,7 +358,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWm-im-I8W">
                                                         <rect key="frame" x="0.0" y="0.0" width="78.5" height="66.5"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.23509306260183385" blue="0.41566064908419764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.23529411764705882" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                                             <bool key="isElement" value="YES"/>
