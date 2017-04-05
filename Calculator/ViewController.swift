@@ -17,15 +17,6 @@ class ViewController: UIViewController {
         }
     }
     
-//    var descriptionValue: Double {
-//        get {
-//            return Double(calculatorDescription.text!)!
-//        }
-//        set {
-//            calculatorDescription.text = String(newValue)
-//        }
-//    }
-    
     @IBAction func touchDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
         
@@ -33,7 +24,7 @@ class ViewController: UIViewController {
             let textCurrentlyInDisplay = display.text!
             if (textCurrentlyInDisplay.contains(".") && digit == ".") {
                 display.text = textCurrentlyInDisplay
-
+                
             }
             else {
                 display.text = textCurrentlyInDisplay + digit
@@ -58,7 +49,7 @@ class ViewController: UIViewController {
         }
         
         if let result = brain.result {
-                        displayValue = result
+            displayValue = result
         }
     }
 }

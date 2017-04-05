@@ -43,7 +43,7 @@ struct CalculatorBrain {
     }
     
     mutating func performOperation(_ symbol: String) {
-        
+        isPartialResult = true
         description += symbol
         
         if let operation = operations[symbol] {
@@ -84,6 +84,11 @@ struct CalculatorBrain {
     }
     
     mutating func displayDescription() -> String{
-        return description
+        if isPartialResult {
+            return description + "..."
+        }
+        else {
+            return description
+        }
     }
 }
