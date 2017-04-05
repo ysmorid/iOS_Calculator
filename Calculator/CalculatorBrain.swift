@@ -28,8 +28,8 @@ struct CalculatorBrain {
         "-": Operation.binaryOperation({$0 - $1}),
         "x": Operation.binaryOperation({$0 * $1}),
         "/": Operation.binaryOperation({$0 / $1}),
-        "=": Operation.equals,
-        ]
+        "=": Operation.equals
+    ]
     
     var result: Double? {
         get {
@@ -44,7 +44,9 @@ struct CalculatorBrain {
     
     mutating func performOperation(_ symbol: String) {
         isPartialResult = true
-        description += symbol
+        if symbol != "=" {
+            description += symbol
+        }
         
         if let operation = operations[symbol] {
             switch operation {
@@ -88,7 +90,7 @@ struct CalculatorBrain {
             return description + "..."
         }
         else {
-            return description
+            return description + "="
         }
     }
 }
