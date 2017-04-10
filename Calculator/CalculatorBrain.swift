@@ -7,6 +7,21 @@ struct CalculatorBrain {
     private var description: String = " "
     private var isPartialResult: Bool = true
     private var internalProgram = [AnyObject]()
+    var variableValues: Dictionary <String, Double> = [:]
+    
+    var result: Double? {
+        get {
+            return accumulator
+        }
+        set {
+            if newValue != nil{
+                accumulator = newValue
+            }
+            else {
+                accumulator = 0.0
+            }
+        }
+    }
     
     typealias PropertyList = AnyObject
     var program: PropertyList {
@@ -17,7 +32,12 @@ struct CalculatorBrain {
             clear()
             if let arrayOfOperations = newValue as? [AnyObject] {
                 for operation in arrayOfOperations {
-                    if let operand = operation as? Double {
+                    if let variableName = operation as? String {
+                        if variableValues[variableName] != nil {
+                            setOperand(variableName)
+                        }
+                    }
+                    else if let operand = operation as? Double {
                         setOperand(operand)
                     }
                     else if let symbol = operation as? String {
@@ -53,27 +73,26 @@ struct CalculatorBrain {
         "C": Operation.clear
     ]
     
-    var result: Double? {
-        get {
-            return accumulator
-        }
+    mutating func setOperand(_ variableName: String){
+        //        result = variableValues[variableName]
+        description += variableName
     }
     
-    mutating func setOperand(_ operand: Double) {
-        accumulator = operand
-        description += String(operand)
-        internalProgram.append(operand as AnyObject)
+    mutating func setOperand(_ numericalDigit: Double) {
+        accumulator = numericalDigit
+        description += String(numericalDigit)
+        internalProgram.append(numericalDigit as AnyObject)
     }
     
-    mutating func performOperation(_ symbol: String) {
+    mutating func performOperation(_ mathematicalOperation: String) {
         isPartialResult = true
-        internalProgram.append(symbol as AnyObject)
-        if symbol != "=" {
-            description += symbol
+        internalProgram.append(mathematicalOperation as AnyObject)
+        if mathematicalOperation != "=" && mathematicalOperation != "√" {
+            description += mathematicalOperation
         }
         
-        if let operation = operations[symbol] {
-            switch operation {
+        if let calculatorOperationButton = operations[mathematicalOperation] {
+            switch calculatorOperationButton {
             case .constant(let value):
                 accumulator = value
             case .unaryOperation (let function):
@@ -81,6 +100,7 @@ struct CalculatorBrain {
                     accumulator = function(accumulator!)
                 }
             case .binaryOperation(let function):
+                performPendingBinaryOperation()
                 if accumulator != nil {
                     pendingBinaryOperation = PendingBinaryOperation(function: function, firstOperand: accumulator!)
                     accumulator = nil
@@ -91,9 +111,7 @@ struct CalculatorBrain {
             case .clear:
                 clear()
             }
-            
         }
-        
     }
     
     private struct PendingBinaryOperation {
@@ -112,11 +130,14 @@ struct CalculatorBrain {
         }
     }
     
-    mutating func displayDescription() -> String{
-        if accumulator == 0.0{
+    mutating func displayDescription(_ mathematicalOperation:String) -> String {
+        if accumulator == 0.0 {
             return description
         }
-        if isPartialResult {
+        if mathematicalOperation == "√" {
+            return mathematicalOperation + "(" + description + ")"
+        }
+        else if isPartialResult {
             return description + "..."
         }
         else {

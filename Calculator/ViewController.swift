@@ -6,6 +6,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var calculatorDescription: UILabel!
     
     @IBAction func save() {
+        
         savedProgram = brain.program
     }
     @IBAction func restore() {
@@ -57,7 +58,7 @@ class ViewController: UIViewController {
         
         if let mathSymbol = sender.currentTitle {
             brain.performOperation(mathSymbol)
-            calculatorDescription.text = brain.displayDescription()
+            calculatorDescription.text = brain.displayDescription(mathSymbol)
         }
         
         if let result = brain.result {

@@ -79,7 +79,7 @@
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                                         </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
-                                                        <state key="normal" title="SAVE">
+                                                        <state key="normal" title="→M">
                                                             <color key="titleColor" red="1" green="0.80392156862745101" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
@@ -93,7 +93,7 @@
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                                         </accessibility>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
-                                                        <state key="normal" title="RESTORE">
+                                                        <state key="normal" title="M">
                                                             <color key="titleColor" red="1" green="0.80392156862745101" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
