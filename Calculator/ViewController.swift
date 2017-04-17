@@ -1,14 +1,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     @IBOutlet weak var display: UILabel!
     @IBOutlet weak var calculatorDescription: UILabel!
     
     @IBAction func save() {
-        
         savedProgram = brain.program
     }
+    
     @IBAction func restore() {
         if savedProgram != nil {
             brain.program = savedProgram!
@@ -17,7 +16,6 @@ class ViewController: UIViewController {
     }
     
     var savedProgram: CalculatorBrain.PropertyList?
-    
     var userIsCurrentlyTyping = false
     private var brain: CalculatorBrain = CalculatorBrain()
     
@@ -37,7 +35,6 @@ class ViewController: UIViewController {
             let textCurrentlyInDisplay = display.text!
             if (textCurrentlyInDisplay.contains(".") && digit == ".") {
                 display.text = textCurrentlyInDisplay
-                
             }
             else {
                 display.text = textCurrentlyInDisplay + digit
@@ -47,7 +44,6 @@ class ViewController: UIViewController {
             display.text = digit
             userIsCurrentlyTyping = true;
         }
-        
     }
     
     @IBAction func performOperation(_ sender: UIButton) {
@@ -66,4 +62,3 @@ class ViewController: UIViewController {
         }
     }
 }
-

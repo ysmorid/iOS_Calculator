@@ -73,17 +73,6 @@ struct CalculatorBrain {
         "C": Operation.clear
     ]
     
-    mutating func setOperand(_ variableName: String){
-        //        result = variableValues[variableName]
-        description += variableName
-    }
-    
-    mutating func setOperand(_ numericalDigit: Double) {
-        accumulator = numericalDigit
-        description += String(numericalDigit)
-        internalProgram.append(numericalDigit as AnyObject)
-    }
-    
     mutating func performOperation(_ mathematicalOperation: String) {
         isPartialResult = true
         internalProgram.append(mathematicalOperation as AnyObject)
@@ -98,6 +87,7 @@ struct CalculatorBrain {
             case .unaryOperation (let function):
                 if accumulator != nil {
                     accumulator = function(accumulator!)
+                    isPartialResult = false
                 }
             case .binaryOperation(let function):
                 performPendingBinaryOperation()
@@ -113,6 +103,19 @@ struct CalculatorBrain {
             }
         }
     }
+    
+    
+    mutating func setOperand(_ variableName: String){
+        result = variableValues[variableName]
+        description += variableName
+    }
+    
+    mutating func setOperand(_ numericalDigit: Double) {
+        accumulator = numericalDigit
+        description += String(numericalDigit)
+        internalProgram.append(numericalDigit as AnyObject)
+    }
+    
     
     private struct PendingBinaryOperation {
         let function: (Double, Double) -> Double
@@ -131,18 +134,16 @@ struct CalculatorBrain {
     }
     
     mutating func displayDescription(_ mathematicalOperation:String) -> String {
-        if accumulator == 0.0 {
-            return description
+        if mathematicalOperation == "√" && !isPartialResult {
+            description = mathematicalOperation + "(" + description + ")"
+            if isPartialResult {
+                return description + "..."
+            }
+            else {
+                return description + "="
+            }
         }
-        if mathematicalOperation == "√" {
-            return mathematicalOperation + "(" + description + ")"
-        }
-        else if isPartialResult {
-            return description + "..."
-        }
-        else {
-            return description + "="
-        }
+        return description
     }
     
     private mutating func clear() {
