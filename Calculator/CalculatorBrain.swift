@@ -74,7 +74,6 @@ struct CalculatorBrain {
     ]
     
     mutating func performOperation(_ mathematicalOperation: String) {
-        isPartialResult = true
         internalProgram.append(mathematicalOperation as AnyObject)
         if mathematicalOperation != "=" && mathematicalOperation != "√" {
             description.append(mathematicalOperation)
@@ -87,9 +86,9 @@ struct CalculatorBrain {
             case .unaryOperation (let function):
                 if accumulator != nil {
                     accumulator = function(accumulator!)
-                    isPartialResult = false
                 }
             case .binaryOperation(let function):
+                isPartialResult = true
                 performPendingBinaryOperation()
                 if accumulator != nil {
                     pendingBinaryOperation = PendingBinaryOperation(function: function, firstOperand: accumulator!)
@@ -141,6 +140,14 @@ struct CalculatorBrain {
             
             return displayResult()
         }
+        else if mathematicalOperation == "√" && isPartialResult {
+            description.insert(mathematicalOperation, at: description.endIndex - 1)
+            description.insert("(", at: (description.endIndex - 1))
+            description.append(")")
+            
+            return displayResult()
+        }
+        
         return displayResult()
     }
     
