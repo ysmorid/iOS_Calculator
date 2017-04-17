@@ -4,7 +4,7 @@ struct CalculatorBrain {
     
     private var accumulator: Double?
     private var pendingBinaryOperation: PendingBinaryOperation?
-    private var description: String = " "
+    private var description = [String]()
     private var isPartialResult: Bool = true
     private var internalProgram = [AnyObject]()
     var variableValues: Dictionary <String, Double> = [:]
@@ -77,7 +77,7 @@ struct CalculatorBrain {
         isPartialResult = true
         internalProgram.append(mathematicalOperation as AnyObject)
         if mathematicalOperation != "=" && mathematicalOperation != "√" {
-            description += mathematicalOperation
+            description.append(mathematicalOperation)
         }
         
         if let calculatorOperationButton = operations[mathematicalOperation] {
@@ -107,12 +107,12 @@ struct CalculatorBrain {
     
     mutating func setOperand(_ variableName: String){
         result = variableValues[variableName]
-        description += variableName
+        description.append(variableName)
     }
     
     mutating func setOperand(_ numericalDigit: Double) {
         accumulator = numericalDigit
-        description += String(numericalDigit)
+        description.append(String(numericalDigit))
         internalProgram.append(numericalDigit as AnyObject)
     }
     
@@ -135,20 +135,28 @@ struct CalculatorBrain {
     
     mutating func displayDescription(_ mathematicalOperation:String) -> String {
         if mathematicalOperation == "√" && !isPartialResult {
-            description = mathematicalOperation + "(" + description + ")"
+            description.insert(mathematicalOperation, at: 0)
+            description.insert("(", at: 1)
+            description.append(")")
+            
             if isPartialResult {
-                return description + "..."
+                return description.joined() + "..."
             }
             else {
-                return description + "="
+                return description.joined() + "="
             }
         }
-        return description
+        if isPartialResult {
+            return description.joined() + "..."
+        }
+        else {
+            return description.joined() + "="
+        }
     }
     
     private mutating func clear() {
         accumulator = 0.0
-        description = " "
+        description.removeAll()
         internalProgram.removeAll()
     }
 }
