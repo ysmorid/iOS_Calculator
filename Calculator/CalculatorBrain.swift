@@ -139,21 +139,20 @@ struct CalculatorBrain {
             description.insert("(", at: 1)
             description.append(")")
             
-            if isPartialResult {
-                return description.joined() + "..."
-            }
-            else {
-                return description.joined() + "="
-            }
+            return displayResult()
         }
+        return displayResult()
+    }
+    
+    private func displayResult() -> String{
         if isPartialResult {
             return description.joined() + "..."
         }
         else {
             return description.joined() + "="
         }
+        
     }
-    
     private mutating func clear() {
         accumulator = 0.0
         description.removeAll()
