@@ -107,6 +107,7 @@ struct CalculatorBrain {
     mutating func setOperand(_ variableName: String){
         result = variableValues[variableName]
         description.append(variableName)
+        internalProgram.append(variableName as AnyObject)
     }
     
     mutating func setOperand(_ numericalDigit: Double) {

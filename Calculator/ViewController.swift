@@ -1,30 +1,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var variableValue = 0.0
+    
     @IBOutlet weak var display: UILabel!
     @IBOutlet weak var calculatorDescription: UILabel!
     
-//    @IBAction func saveDigit() {
-//        variableValue = displayValue
-//        brain.variableValues["M"] = variableValue
-//        savedProgram = brain.program
-//        print("Hello")
-//    }
-    
-    @IBAction func saveMemory(_ sender: UIButton) {
-    brain.variableValues["M"] = Double(sender.currentTitle!)
-        savedProgram = brain.program
-        print("Hello!")
+    @IBAction func saveDigit() {
+        brain.variableValues["M"] = displayValue
+        brain.program = brain.program
+        displayValue = brain.result!
     }
-    
     
     @IBAction func displaySavedDigit() {
         brain.setOperand("M")
-        if savedProgram != nil {
-            brain.program = savedProgram!
-            displayValue = brain.result!
-        }
+        displayValue = brain.result!
     }
     
     var savedProgram: CalculatorBrain.PropertyList?
