@@ -83,7 +83,7 @@
                                                             <color key="titleColor" red="1" green="0.80392156862745101" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="save" destination="BYZ-38-t0r" eventType="touchUpInside" id="sSU-TM-rDx"/>
+                                                            <action selector="saveMemory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sNI-iX-M56"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7RR-xh-IyK">
@@ -97,7 +97,7 @@
                                                             <color key="titleColor" red="1" green="0.80392156862745101" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="restore" destination="BYZ-38-t0r" eventType="touchUpInside" id="RE9-FI-ESD"/>
+                                                            <action selector="displaySavedDigit" destination="BYZ-38-t0r" eventType="touchUpInside" id="rl6-sh-aiy"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>

@@ -147,8 +147,12 @@ struct CalculatorBrain {
             
             return displayResult()
         }
-        
-        return displayResult()
+        else if description.count == 0 {
+            return description.joined() + " "
+        }
+        else {
+            return displayResult()
+        }
     }
     
     private func displayResult() -> String{
@@ -164,5 +168,6 @@ struct CalculatorBrain {
         accumulator = 0.0
         description.removeAll()
         internalProgram.removeAll()
+        isPartialResult = true
     }
 }
