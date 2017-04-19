@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBAction func displaySavedDigit() {
         brain.setOperand("M")
         displayValue = brain.result!
+        
     }
     
     var savedProgram: CalculatorBrain.PropertyList?

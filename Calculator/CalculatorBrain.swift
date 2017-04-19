@@ -29,7 +29,8 @@ struct CalculatorBrain {
             return internalProgram as CalculatorBrain.PropertyList
         }
         set {
-            clear()
+            accumulator = 0.0
+            internalProgram.removeAll()
             if let arrayOfOperations = newValue as? [AnyObject] {
                 for operation in arrayOfOperations {
                     if let variableName = operation as? String {
@@ -169,6 +170,7 @@ struct CalculatorBrain {
         accumulator = 0.0
         description.removeAll()
         internalProgram.removeAll()
+        variableValues.removeValue(forKey: "M")
         isPartialResult = true
     }
 }
