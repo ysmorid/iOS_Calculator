@@ -68,14 +68,14 @@ class ViewController: UIViewController {
         if userIsCurrentlyTyping && !display.text!.isEmpty {
             display.text! = display.text!.substring(to: display.text!.index(before: display.text!.endIndex))
             if display.text!.isEmpty {
-                display.text! = " "
+                display.text! = "0.0"
                 userIsCurrentlyTyping = false
             }
         }
         else {
+            brain.undo()
             brain.program = brain.program
-            calculatorDescription.text! = brain.undo()
-            
+            calculatorDescription.text! = brain.displayRevisedDescription()
         }
     }
     

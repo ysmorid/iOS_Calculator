@@ -55,7 +55,6 @@ struct CalculatorBrain {
         case binaryOperation((Double, Double) -> Double)
         case equals
         case clear
-        case undo
     }
     
     private var operations: Dictionary<String, Operation> = [
@@ -72,8 +71,7 @@ struct CalculatorBrain {
         "x": Operation.binaryOperation({$0 * $1}),
         "/": Operation.binaryOperation({$0 / $1}),
         "=": Operation.equals,
-        "C": Operation.clear,
-        "UNDO": Operation.undo
+        "C": Operation.clear
     ]
     
     mutating func performOperation(_ mathematicalOperation: String) {
@@ -102,12 +100,9 @@ struct CalculatorBrain {
                 isPartialResult = false
             case .clear:
                 clear()
-            case .undo:
-                undo()
             }
         }
     }
-    
     
     mutating func setOperand(_ variableName: String){
         result = variableValues[variableName]
@@ -168,23 +163,32 @@ struct CalculatorBrain {
         else {
             return description.joined() + "="
         }
-        
     }
+    
+    mutating func displayRevisedDescription() -> String {
+        if !description.isEmpty {
+            description.removeLast()
+            if description.isEmpty {
+                return description.joined() + " "
+            }
+            return description.joined()
+        }
+        else {
+            return description.joined() + " "
+        }
+    }
+    
+    mutating func undo() {
+        if !internalProgram.isEmpty {
+            internalProgram.removeLast()
+        }
+    }
+    
     private mutating func clear() {
         accumulator = 0.0
         description.removeAll()
         internalProgram.removeAll()
         variableValues.removeValue(forKey: "M")
         isPartialResult = true
-    }
-    
-    mutating func undo() -> String {
-        if !internalProgram.isEmpty {
-            internalProgram.removeLast()
-        }
-        if !description.isEmpty {
-            description.removeLast()
-        }
-        return description.joined()
     }
 }
