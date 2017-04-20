@@ -2,6 +2,19 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var savedProgram: CalculatorBrain.PropertyList?
+    var userIsCurrentlyTyping = false
+    private var brain: CalculatorBrain = CalculatorBrain()
+    
+    var displayValue: Double {
+        get {
+            return Double(display.text!)!
+        }
+        set {
+            display.text = String(newValue)
+        }
+    }
+    
     @IBOutlet weak var display: UILabel!
     @IBOutlet weak var calculatorDescription: UILabel!
     
@@ -15,19 +28,6 @@ class ViewController: UIViewController {
         brain.setOperand("M")
         displayValue = brain.result!
         
-    }
-    
-    var savedProgram: CalculatorBrain.PropertyList?
-    var userIsCurrentlyTyping = false
-    private var brain: CalculatorBrain = CalculatorBrain()
-    
-    var displayValue: Double {
-        get {
-            return Double(display.text!)!
-        }
-        set {
-            display.text = String(newValue)
-        }
     }
     
     @IBAction func touchDigit(_ sender: UIButton) {
@@ -63,4 +63,20 @@ class ViewController: UIViewController {
             displayValue = result
         }
     }
+    
+    @IBAction func undoLast() {
+        if userIsCurrentlyTyping && !display.text!.isEmpty {
+            display.text! = display.text!.substring(to: display.text!.index(before: display.text!.endIndex))
+            if display.text!.isEmpty {
+                display.text! = " "
+                userIsCurrentlyTyping = false
+            }
+        }
+        else {
+            brain.program = brain.program
+            calculatorDescription.text! = brain.undo()
+            
+        }
+    }
+    
 }

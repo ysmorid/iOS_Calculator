@@ -55,6 +55,7 @@ struct CalculatorBrain {
         case binaryOperation((Double, Double) -> Double)
         case equals
         case clear
+        case undo
     }
     
     private var operations: Dictionary<String, Operation> = [
@@ -71,7 +72,8 @@ struct CalculatorBrain {
         "x": Operation.binaryOperation({$0 * $1}),
         "/": Operation.binaryOperation({$0 / $1}),
         "=": Operation.equals,
-        "C": Operation.clear
+        "C": Operation.clear,
+        "UNDO": Operation.undo
     ]
     
     mutating func performOperation(_ mathematicalOperation: String) {
@@ -100,6 +102,8 @@ struct CalculatorBrain {
                 isPartialResult = false
             case .clear:
                 clear()
+            case .undo:
+                undo()
             }
         }
     }
@@ -172,5 +176,15 @@ struct CalculatorBrain {
         internalProgram.removeAll()
         variableValues.removeValue(forKey: "M")
         isPartialResult = true
+    }
+    
+    mutating func undo() -> String {
+        if !internalProgram.isEmpty {
+            internalProgram.removeLast()
+        }
+        if !description.isEmpty {
+            description.removeLast()
+        }
+        return description.joined()
     }
 }
