@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class CalculatorViewController: UIViewController {
     
     var savedProgram: CalculatorBrain.PropertyList?
     var userIsCurrentlyTyping = false
