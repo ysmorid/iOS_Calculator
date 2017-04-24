@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Calculator View Controller-->
+        <!--Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,13 +23,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="n5M-dO-RnH">
-                                <rect key="frame" x="16" y="20" width="343" height="639"/>
+                                <rect key="frame" x="16" y="64" width="343" height="595"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="aw9-Dr-nrz">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="92"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="86"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SJa-4R-eoI">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="37"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="34.5"/>
                                                 <color key="backgroundColor" red="0.0054413769389999997" green="0.10038062189999999" blue="0.57610303159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <bool key="isElement" value="NO"/>
@@ -40,7 +40,7 @@
                                                 <color key="shadowColor" red="0.0054413769389999997" green="0.10038062189999999" blue="0.57610303159999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qYi-ux-AoR">
-                                                <rect key="frame" x="0.0" y="37" width="343" height="55"/>
+                                                <rect key="frame" x="0.0" y="34.5" width="343" height="51.5"/>
                                                 <color key="backgroundColor" red="0.0054413769394159317" green="0.10038062185049057" blue="0.57610303163528442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <bool key="isElement" value="NO"/>
@@ -53,10 +53,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="co0-Ua-VFZ">
-                                        <rect key="frame" x="0.0" y="102" width="343" height="53.5"/>
+                                        <rect key="frame" x="0.0" y="96" width="343" height="49.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geH-2V-jrV">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="53.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="49.5"/>
                                                 <color key="backgroundColor" red="0.1217852652457712" green="0.6751227482313451" blue="0.33636191740677995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -66,19 +66,19 @@
                                                     <color key="titleColor" red="1" green="0.80518239736557007" blue="0.39375054836273193" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="displaySavedDigit" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q0h-Po-lVu"/>
+                                                    <segue destination="mNB-xW-934" kind="showDetail" id="R5Z-Iv-wFt"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wuB-RJ-six">
-                                        <rect key="frame" x="0.0" y="165.5" width="343" height="473.5"/>
+                                        <rect key="frame" x="0.0" y="155.5" width="343" height="439.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yTD-1r-a1f">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="59"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="54.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oya-8k-shc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="59"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="54.5"/>
                                                         <color key="backgroundColor" red="1" green="0.80392156862745101" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -92,7 +92,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Eb-df-oWw">
-                                                        <rect key="frame" x="88.5" y="0.0" width="78" height="59"/>
+                                                        <rect key="frame" x="88.5" y="0.0" width="78" height="54.5"/>
                                                         <color key="backgroundColor" red="1" green="0.80392156859999997" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -106,7 +106,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDm-py-OI7">
-                                                        <rect key="frame" x="176.5" y="0.0" width="78.5" height="59"/>
+                                                        <rect key="frame" x="176.5" y="0.0" width="78.5" height="54.5"/>
                                                         <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -120,7 +120,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7RR-xh-IyK">
-                                                        <rect key="frame" x="265" y="0.0" width="78" height="59"/>
+                                                        <rect key="frame" x="265" y="0.0" width="78" height="54.5"/>
                                                         <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -136,10 +136,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mno-Jz-lLj">
-                                                <rect key="frame" x="0.0" y="69" width="343" height="59"/>
+                                                <rect key="frame" x="0.0" y="64.5" width="343" height="54"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsT-1x-wBq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="59"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="54"/>
                                                         <color key="backgroundColor" red="0.46500998735427856" green="0.83762544393539429" blue="0.99940603971481323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -156,7 +156,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWZ-cY-Jct">
-                                                        <rect key="frame" x="88.5" y="0.0" width="78" height="59"/>
+                                                        <rect key="frame" x="88.5" y="0.0" width="78" height="54"/>
                                                         <color key="backgroundColor" red="0.65490196078431373" green="0.78431372549019607" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -170,7 +170,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofa-eT-A6z">
-                                                        <rect key="frame" x="176.5" y="0.0" width="78.5" height="59"/>
+                                                        <rect key="frame" x="176.5" y="0.0" width="78.5" height="54"/>
                                                         <color key="backgroundColor" red="0.65490196078431373" green="0.78431372549019607" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -184,7 +184,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9z6-M0-aei">
-                                                        <rect key="frame" x="265" y="0.0" width="78" height="59"/>
+                                                        <rect key="frame" x="265" y="0.0" width="78" height="54"/>
                                                         <color key="backgroundColor" red="0.65490196078431373" green="0.78431372549019607" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -200,10 +200,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SQj-NM-uKv">
-                                                <rect key="frame" x="0.0" y="138" width="343" height="59.5"/>
+                                                <rect key="frame" x="0.0" y="128.5" width="343" height="54"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5TJ-f8-ok6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="59.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="54"/>
                                                         <color key="backgroundColor" red="0.46500998735427856" green="0.83762544393539429" blue="0.99940603971481323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -217,7 +217,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7K-3b-Agd">
-                                                        <rect key="frame" x="88.5" y="0.0" width="78" height="59.5"/>
+                                                        <rect key="frame" x="88.5" y="0.0" width="78" height="54"/>
                                                         <color key="backgroundColor" red="0.65630233770000002" green="0.78393064359999998" blue="0.94499891999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -231,7 +231,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsH-Su-U0d">
-                                                        <rect key="frame" x="176.5" y="0.0" width="78.5" height="59.5"/>
+                                                        <rect key="frame" x="176.5" y="0.0" width="78.5" height="54"/>
                                                         <color key="backgroundColor" red="0.65630233770000002" green="0.78393064359999998" blue="0.94499891999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -245,7 +245,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cR-Rq-icf">
-                                                        <rect key="frame" x="265" y="0.0" width="78" height="59.5"/>
+                                                        <rect key="frame" x="265" y="0.0" width="78" height="54"/>
                                                         <color key="backgroundColor" red="0.65630233770000002" green="0.78393064359999998" blue="0.94499891999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -261,10 +261,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="97l-pF-1xp">
-                                                <rect key="frame" x="0.0" y="207.5" width="343" height="59"/>
+                                                <rect key="frame" x="0.0" y="192.5" width="343" height="54.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drf-f5-Hla">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="59"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="54.5"/>
                                                         <color key="backgroundColor" red="0.46500998735427856" green="0.83762544393539429" blue="0.99940603971481323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -279,7 +279,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlj-FE-yub">
-                                                        <rect key="frame" x="88.5" y="0.0" width="78" height="59"/>
+                                                        <rect key="frame" x="88.5" y="0.0" width="78" height="54.5"/>
                                                         <color key="backgroundColor" red="0.65490196078431373" green="0.78431372549019607" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -294,7 +294,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwz-ar-TQI">
-                                                        <rect key="frame" x="176.5" y="0.0" width="78.5" height="59"/>
+                                                        <rect key="frame" x="176.5" y="0.0" width="78.5" height="54.5"/>
                                                         <color key="backgroundColor" red="0.65490196078431373" green="0.78431372549019607" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -309,7 +309,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyx-u9-KWz">
-                                                        <rect key="frame" x="265" y="0.0" width="78" height="59"/>
+                                                        <rect key="frame" x="265" y="0.0" width="78" height="54.5"/>
                                                         <color key="backgroundColor" red="0.65490196078431373" green="0.78431372549019607" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -326,10 +326,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PWO-XN-7yZ">
-                                                <rect key="frame" x="0.0" y="276.5" width="343" height="59"/>
+                                                <rect key="frame" x="0.0" y="257" width="343" height="54"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Np-he-wHc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="59"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="54"/>
                                                         <color key="backgroundColor" red="0.46500998735427856" green="0.83762544393539429" blue="0.99940603971481323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -343,7 +343,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnC-Ci-QTh">
-                                                        <rect key="frame" x="88.5" y="0.0" width="78" height="59"/>
+                                                        <rect key="frame" x="88.5" y="0.0" width="78" height="54"/>
                                                         <color key="backgroundColor" red="0.46500998735427856" green="0.83762544393539429" blue="0.99940603971481323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -357,7 +357,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3t-cW-EqM">
-                                                        <rect key="frame" x="176.5" y="0.0" width="78.5" height="59"/>
+                                                        <rect key="frame" x="176.5" y="0.0" width="78.5" height="54"/>
                                                         <color key="backgroundColor" red="0.65490196078431373" green="0.78431372549019607" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -371,7 +371,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLh-l0-nS1">
-                                                        <rect key="frame" x="265" y="0.0" width="78" height="59"/>
+                                                        <rect key="frame" x="265" y="0.0" width="78" height="54"/>
                                                         <color key="backgroundColor" red="0.46500998735427856" green="0.83762544393539429" blue="0.99940603971481323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -387,10 +387,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jz9-LG-OTy">
-                                                <rect key="frame" x="0.0" y="345.5" width="343" height="59"/>
+                                                <rect key="frame" x="0.0" y="321" width="343" height="54.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWm-im-I8W">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="59"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="54.5"/>
                                                         <color key="backgroundColor" red="0.0" green="0.23529411764705882" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -405,7 +405,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYZ-ua-0is">
-                                                        <rect key="frame" x="88.5" y="0.0" width="78" height="59"/>
+                                                        <rect key="frame" x="88.5" y="0.0" width="78" height="54.5"/>
                                                         <color key="backgroundColor" red="0.0" green="0.23509306260183385" blue="0.41566064908419764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -420,7 +420,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pM6-RW-bbj">
-                                                        <rect key="frame" x="176.5" y="0.0" width="78.5" height="59"/>
+                                                        <rect key="frame" x="176.5" y="0.0" width="78.5" height="54.5"/>
                                                         <color key="backgroundColor" red="0.0" green="0.23509306260183385" blue="0.41566064908419764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -435,7 +435,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUl-F3-CJE">
-                                                        <rect key="frame" x="265" y="0.0" width="78" height="59"/>
+                                                        <rect key="frame" x="265" y="0.0" width="78" height="54.5"/>
                                                         <color key="backgroundColor" red="0.0" green="0.23509306260183385" blue="0.41566064908419764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -452,10 +452,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GMw-CP-iNI">
-                                                <rect key="frame" x="0.0" y="414.5" width="343" height="59"/>
+                                                <rect key="frame" x="0.0" y="385.5" width="343" height="54"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYK-8Q-peV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="59"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="54"/>
                                                         <color key="backgroundColor" red="0.0" green="0.23509306260000001" blue="0.4156606491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -470,7 +470,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvG-4v-im2">
-                                                        <rect key="frame" x="88.5" y="0.0" width="78" height="59"/>
+                                                        <rect key="frame" x="88.5" y="0.0" width="78" height="54"/>
                                                         <color key="backgroundColor" red="0.0" green="0.23509306260183385" blue="0.41566064908419764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -485,7 +485,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gA8-Vp-SNL">
-                                                        <rect key="frame" x="176.5" y="0.0" width="78.5" height="59"/>
+                                                        <rect key="frame" x="176.5" y="0.0" width="78.5" height="54"/>
                                                         <color key="backgroundColor" red="0.0" green="0.23509306260183385" blue="0.41566064908419764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -500,7 +500,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqW-oz-YLs">
-                                                        <rect key="frame" x="265" y="0.0" width="78" height="59"/>
+                                                        <rect key="frame" x="265" y="0.0" width="78" height="54"/>
                                                         <color key="backgroundColor" red="0.0" green="0.23509306260000001" blue="0.4156606491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -530,6 +530,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="n5M-dO-RnH" secondAttribute="trailing" id="gqK-sF-oaq"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Calculator" id="zcz-VW-Vo0"/>
                     <connections>
                         <outlet property="calculatorDescription" destination="SJa-4R-eoI" id="4qj-5K-AQ0"/>
                         <outlet property="display" destination="qYi-ux-AoR" id="Y32-dj-8D9"/>
@@ -537,20 +538,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-428" y="-53"/>
+            <point key="canvasLocation" x="516" y="-515.8920539730135"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="qa9-3K-u3G">
             <objects>
                 <splitViewController id="OE4-Ro-KRX" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="masterViewController" id="0Rv-FN-UDq"/>
-                        <segue destination="mNB-xW-934" kind="relationship" relationship="detailViewController" id="FW6-Dq-92f"/>
+                        <segue destination="2s9-9I-4Y3" kind="relationship" relationship="masterViewController" id="0Rv-FN-UDq"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MLC-GA-dJH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1119" y="-52"/>
+            <point key="canvasLocation" x="-1175" y="-66"/>
         </scene>
         <!--Graph View Controller-->
         <scene sceneID="N2F-vE-YYi">
@@ -560,15 +560,34 @@
                         <viewControllerLayoutGuide type="top" id="0sx-zd-6XN"/>
                         <viewControllerLayoutGuide type="bottom" id="sUD-ii-um8"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bdo-qP-vVU">
+                    <view key="view" contentMode="scaleToFill" id="bdo-qP-vVU" customClass="GraphView" customModule="Calculator" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8a8-Ts-Yla"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2B-KE-2Bd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="297" y="-53"/>
+            <point key="canvasLocation" x="516" y="184"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ggZ-z0-cmB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2s9-9I-4Y3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hJd-LM-mkK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eho-Mb-m0U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U5Z-Uh-xyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-423.19999999999999" y="-515.8920539730135"/>
         </scene>
     </scenes>
 </document>
