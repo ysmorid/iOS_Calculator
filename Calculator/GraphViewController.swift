@@ -15,6 +15,13 @@ class GraphViewController: UIViewController {
     @IBOutlet weak var graphView: GraphView! {
         didSet {
            graphView.function = function
+//            
+//            let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.pan(recognizer:)))
+//            graphView.addGestureRecognizer(panGestureRecognizer)
+//            
+            let handler = #selector(GraphView.changeScale(byReactingTo: ))
+            let pinchRecognizer = UIPinchGestureRecognizer(target: graphView, action: handler)
+            graphView.addGestureRecognizer(pinchRecognizer)
         }
     }
 }

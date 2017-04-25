@@ -1,5 +1,6 @@
 import UIKit
 
+@IBDesignable
 class GraphView: UIView {
     
     var function: ((Double) -> Double)? {
@@ -15,6 +16,16 @@ class GraphView: UIView {
     var lineWidth: CGFloat = 3.0 { didSet { setNeedsDisplay()}}
     @IBInspectable
     var color: UIColor = UIColor.black { didSet { setNeedsDisplay()}}
+    
+    func changeScale(byReactingTo pinchRecognizer: UIPinchGestureRecognizer) {
+        switch pinchRecognizer.state {
+        case .changed, .ended:
+            scale *= pinchRecognizer.scale
+            pinchRecognizer.scale = 1
+        default:
+            break
+        }
+    }
     
     override func draw(_ rect: CGRect) {
         if !isOriginSet {
