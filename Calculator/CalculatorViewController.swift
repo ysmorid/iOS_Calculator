@@ -86,7 +86,10 @@ class CalculatorViewController: UIViewController {
         }
         
         if let graphViewController = destinationViewController as? GraphViewController {
-            if segue.identifier == "graphFunction"{
+            if segue.identifier == "graphFunction" && !brain.isPartialResult{
+                
+                graphViewController.navigationItem.title = brain.displayResult()
+                
                 graphViewController.function = {
                     (x: Double) -> Double in
                     self.brain.variableValues["M"] = x

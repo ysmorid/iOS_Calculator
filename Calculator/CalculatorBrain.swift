@@ -156,7 +156,7 @@ struct CalculatorBrain {
         }
     }
     
-    private func displayResult() -> String{
+    func displayResult() -> String{
         if isPartialResult {
             return description.joined() + "..."
         }
