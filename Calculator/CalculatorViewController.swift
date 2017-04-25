@@ -80,7 +80,10 @@ class CalculatorViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationViewController = segue.destination
+        var destinationViewController = segue.destination
+        if let navigationController = destinationViewController as? UINavigationController {
+            destinationViewController = navigationController.visibleViewController ?? destinationViewController
+        }
         
         if let graphViewController = destinationViewController as? GraphViewController {
             if segue.identifier == "graphFunction"{
