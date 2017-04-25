@@ -28,6 +28,32 @@ class GraphView: UIView {
         let path = UIBezierPath()
         path.lineWidth = lineWidth
         color.set()
+        
+        var startingPoint: Bool = true
+        
+        if function != nil {
+            for x in 0...Int(bounds.width * scale) {
+                let pointX = CGFloat(x) / scale
+                
+                let xValue = Double((pointX - origin.x) / scale)
+                let yValue = function!(xValue)
+                
+                if !yValue.isZero && !yValue.isNormal {
+                    startingPoint = true
+                    continue
+                }
+                
+                let pointY = origin.y - CGFloat(yValue) * scale
+                
+                if startingPoint {
+                    path.move(to: CGPoint(x: pointX, y: pointY))
+                    startingPoint = false
+                } else {
+                    path.addLine(to: CGPoint(x: pointX, y: pointY))
+                    
+                }
+            }
+        }
         path.stroke()
     }
     

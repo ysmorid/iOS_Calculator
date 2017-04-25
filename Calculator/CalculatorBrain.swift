@@ -5,7 +5,7 @@ struct CalculatorBrain {
     private var accumulator: Double?
     private var pendingBinaryOperation: PendingBinaryOperation?
     private var description = [String]()
-    private var isPartialResult: Bool = true
+    var isPartialResult: Bool = true
     private var internalProgram = [AnyObject]()
     var variableValues: Dictionary <String, Double> = [:]
     

@@ -79,11 +79,19 @@ class CalculatorViewController: UIViewController {
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let destinationViewController = segue.destination
-//        if let graphViewController = destinationViewController as ? GraphViewController {
-//            
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationViewController = segue.destination
+        
+        if let graphViewController = destinationViewController as? GraphViewController {
+            if segue.identifier == "graphFunction"{
+                graphViewController.function = {
+                    (x: Double) -> Double in
+                    self.brain.variableValues["M"] = x
+                    self.brain.program = self.brain.program
+                    return self.brain.result ?? 0
+                }
+            }
     
+        }
+    }
 }

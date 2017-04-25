@@ -66,7 +66,7 @@
                                                     <color key="titleColor" red="1" green="0.80518239736557007" blue="0.39375054836273193" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="mNB-xW-934" kind="showDetail" id="R5Z-Iv-wFt"/>
+                                                    <segue destination="mNB-xW-934" kind="showDetail" identifier="graphFunction" id="R5Z-Iv-wFt"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -555,7 +555,7 @@
         <!--Graph View Controller-->
         <scene sceneID="N2F-vE-YYi">
             <objects>
-                <viewController id="mNB-xW-934" customClass="GraphViewController" sceneMemberID="viewController">
+                <viewController id="mNB-xW-934" customClass="GraphViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0sx-zd-6XN"/>
                         <viewControllerLayoutGuide type="bottom" id="sUD-ii-um8"/>
@@ -566,6 +566,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="8a8-Ts-Yla"/>
+                    <connections>
+                        <outlet property="graphView" destination="bdo-qP-vVU" id="F5D-DR-HUu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2B-KE-2Bd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
