@@ -17,6 +17,18 @@ class GraphView: UIView {
     @IBInspectable
     var color: UIColor = UIColor.black { didSet { setNeedsDisplay()}}
     
+    func changeView(byReactingTo panRecognizer: UIPanGestureRecognizer) {
+        switch panRecognizer.state {
+        case .changed, .ended:
+            let move = panRecognizer.translation(in: self)
+            origin = CGPoint(x: origin.x + move.x, y: origin.y + move.y)
+            panRecognizer.setTranslation(CGPoint.zero, in: self)
+
+        default:
+            break
+        }
+    }
+    
     func changeScale(byReactingTo pinchRecognizer: UIPinchGestureRecognizer) {
         switch pinchRecognizer.state {
         case .changed, .ended:
@@ -24,6 +36,12 @@ class GraphView: UIView {
             pinchRecognizer.scale = 1
         default:
             break
+        }
+    }
+    
+    func changeOrigin(byReactingTo tapRecognizer: UITapGestureRecognizer) {
+        if tapRecognizer.state == .ended {
+            origin = tapRecognizer.location(in: self)
         }
     }
     

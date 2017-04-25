@@ -1,10 +1,3 @@
-//
-//  GraphViewController.swift
-//  Calculator
-//
-//  Created by Ylia Moridzadeh on 4/24/17.
-//  Copyright © 2017 Ylia Moridzadeh. All rights reserved.
-//
 
 import UIKit
 
@@ -15,13 +8,16 @@ class GraphViewController: UIViewController {
     @IBOutlet weak var graphView: GraphView! {
         didSet {
            graphView.function = function
-//            
-//            let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.pan(recognizer:)))
-//            graphView.addGestureRecognizer(panGestureRecognizer)
-//            
-            let handler = #selector(GraphView.changeScale(byReactingTo: ))
-            let pinchRecognizer = UIPinchGestureRecognizer(target: graphView, action: handler)
+            
+            let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(GraphView.changeView(byReactingTo: )))
+            graphView.addGestureRecognizer(panRecognizer)
+
+            let pinchRecognizer = UIPinchGestureRecognizer(target: graphView, action: #selector(GraphView.changeScale(byReactingTo: )))
             graphView.addGestureRecognizer(pinchRecognizer)
+            
+            let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(GraphView.changeOrigin(byReactingTo: )))
+            tapRecognizer.numberOfTapsRequired = 2
+            graphView.addGestureRecognizer(tapRecognizer)
         }
     }
 }
